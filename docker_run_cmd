@@ -1,1 +1,5 @@
-docker run -it -v /Users/ttiede/workspace/github/thortiede/client_scripter/config:/config -v /Users/ttiede/workspace/github/thortiede/client_scripter/scripts:/code -v /Users/ttiede/workspace/github/thortiede/client_scripter/logs:/logs -v /Users/ttiede/workspace/github/thortiede/client_scripter/graphml:/graphml -v /Users/ttiede/workspace/github/thortiede/client_scripter/output:/output sbml4j-scripter optimal
+# interactive
+docker run -it -v ${PWD}/config:/config -v ${PWD}/scripts:/code -v ${PWD}/logs:/logs -v ${PWD}/graphml:/graphml -v ${PWD}/output:/output --name pysbml4j_script_runner --rm pysbml4j_script_runner:0.1
+
+# detached
+docker run -d -v ${PWD}/config:/config -v ${PWD}/scripts:/code -v ${PWD}/logs:/logs -v ${PWD}/graphml:/graphml -v ${PWD}/output:/output --name pysbml4j_script_runner --rm pysbml4j_script_runner:0.1

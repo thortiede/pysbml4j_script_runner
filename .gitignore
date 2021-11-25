@@ -3,3 +3,4 @@ graphml/*.graphml
 logs/*.log
 output/*.graphml
 logs/*.log.*
+backup/
